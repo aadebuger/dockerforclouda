@@ -40,18 +40,17 @@ App.chatroom = sumeru.controller.create(function(env, session){
 	
 	  	if (inputVal == '' || inputValName == '') {
 	  		
-	  		alert("xxxx");
+	  		alert("用户名和消息不能为空！");
 	  		return false; 
 	  	};
-	  
+	  	
 session.chatMessages.add({
 		  	username: inputValName,
 		  	message : inputVal, 
 		  	time : (new Date()).valueOf()  
 	  	});
 	
-	  	session.chatMessages.save();	
-	  	
+	  	session.chatMessages.save();	  	
 	  	
 	  	input.value = '';
 	  	input.focus();	  	      
